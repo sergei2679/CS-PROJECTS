@@ -1,5 +1,3 @@
-﻿using System;
-
 namespace Lesson29012020_Time
 {
     class Time
@@ -86,14 +84,18 @@ namespace Lesson29012020_Time
             return ((((minute * 60) + second) * 60) + millisecond) * 1000;  
         }
        
-        private static string AddZero(int num)    //  static function = no using any variables of class (hour,minute,second)
+        static string AddZero(int num)    //  static function = no using any variables of class (hour,minute,second)
+        {
+            return (num < 10 ? "0" : "") + num;
+        }
+        static string AddZero(long num)    //  static function = no using any variables of class (hour,minute,second)
         {
             return (num < 10 ? "0" : "") + num;
         }
 
         public string toString()
         {
-            return AddZero(hour) + ":" + AddZero(minute) + ":" + AddZero(second);
+            return AddZero(hour) + ":" + AddZero(minute) + ":" + AddZero(second) + ":" + AddZero(millisecond);
         }
         public string toString(long ticks)
         {
