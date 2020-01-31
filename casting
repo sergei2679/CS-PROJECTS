@@ -1,0 +1,174 @@
+﻿using System;
+
+namespace Lesson_20191209
+{
+    class Program
+    {
+        //byte[] buffer = LoadByteArray("* * * ");
+        //string byteArrayString = Encoding.UTF8.GetString(buffer, 0, buffer.Length);
+
+        static void Main(string[] args)
+        {
+            int[] binary = new int[32];
+            int[] arr = { 1, 0, 1, 1, 0, 0, 1 };
+            char[] chars= { '9', '3', '2', '2' };
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                binary[binary.Length - arr.Length + i] = arr[i];
+            }
+            binary[0] = 1;
+
+            PrintArray(DecimalToBinary(89));
+
+            Console.WriteLine(CharToDecimal(chars));
+
+            Console.WriteLine(decimalToString(1234));
+
+            Console.ReadLine();
+        }
+
+        // 41
+        static int binaryToDecimal(int[] binary)
+        {
+            int result = 0;
+            for (int i = 0; i < binary.Length; i++)
+                result = 2 * result + binary[i];
+            return result;
+        }
+        // 42
+        static int[] DecimalToBinary(int x)
+        {
+            int [] result = new int[32];
+            for (int i = result.Length - 1; i >= 0; i--)
+            {
+                result[i] = x % 2;
+                x /= 2;
+            }
+            return result;
+        }
+
+        static int SumArrayDecimal(int[] integer1,int[] integer2)
+        {
+            int SUM = 0;
+            for (int i = 0; i < integer1.Length; i++)
+            {
+                SUM+=integer1[i];
+            }
+            for (int i = 0; i < integer2[i];i++)
+            {
+                SUM += integer2[i];
+            }
+            return SUM;
+        }
+
+        static int CharToDecimal(char[] chars)
+        {
+            int result = 0;
+            for (int i = 0; i < chars[i]; i++)
+            {
+                result += 10*(chars[i] - 48);
+            }
+            return result;
+        }
+
+        static string decimalToString(int integer)
+        {
+            string s = null;
+            while (integer > 0)
+            {
+                s += integer % 10 + '\0';
+                integer /= 10;
+            }
+            return s;
+        }
+
+        static int Sum(int x, int y)
+        {
+            return x + y;
+        }
+
+        static void PrintArray(int[] arr)
+        {
+            Console.Write("{");
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                Console.Write(arr[i] + ",");
+            }
+            if (arr.Length > 0)
+                Console.Write(arr[arr.Length - 1]);
+            Console.WriteLine("}");
+        }
+
+        static string GetSegment(char ch, int k)    // -- can't do casting back from char to any other type
+        {
+            string str = "";
+
+            if (k > 0)
+                str = GetSegment(ch, k - 1);
+            return str;
+        }
+      
+        //static void SetSegment(string seg, int k, int n)
+        //{
+        //    if (n > 0)
+        //    {
+        //        line = GetSegment(ch, k - 1);
+        //        PrintSegment(ch, k - 1, n - 1);
+        //    }
+        //}
+
+        static string MergeSegmentRow(string seg, int k)    // -- can't do casting back from char to any other type
+        {
+            string str = "|";
+
+            if (k > 0)
+                str = MergeSegmentRow(seg, k - 1);
+            return str;
+        }
+
+        //static void PrintRow(string seg, int k, int n)
+        //{
+        //    string line = "";
+
+        //    if (n > 0)
+        //    {
+        //        line = GetLineByChar(ch, k - 1);
+        //        PrintMatrixByChar(ch, k - 1, n - 1);
+        //    }
+        //}
+
+
+
+        //static void PrintLine(char ch, int k)    // -- can't do casting back from char to any other type
+        //{
+        //    if (k < 1)
+        //        return;
+        //    k--;
+        //    Console.Write(ch);
+        //    PrintChar(ch, k - 1);
+        //}
+
+        //static byte[] LoadByteArray(string str)
+        //{
+        //    var bitsToPad = 8 - str.Length % 8;
+
+        //    if (bitsToPad != 8)
+
+        //    {
+        //        var neededLength = bitsToPad + str.Length;
+        //        str = str.PadLeft(neededLength, '0');
+        //    }
+
+        //    int size = str.Length / 8;
+        //    byte[] arr = new byte[size];
+
+        //    for (int a = 0; a < size; a++)
+        //    {
+        //        arr[a] = Convert.ToByte(str.Substring(a * 8, 8), 2);
+        //    }
+        //    return arr;
+        //}
+
+    }
+}
