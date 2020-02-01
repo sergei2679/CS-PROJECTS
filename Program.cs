@@ -1,38 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Lesson29012020_Time
+namespace DisassemblyNumber
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("====== System Object DateTime Now ========================");
-            //Time copyTime = new Time(DateTime.Now);
-            //Console.WriteLine(copyTime.Hour + ":" + copyTime.Minute + ":" + copyTime.Second);
+            int number = 812;
+            int otherNumber = 1012;
 
-            Time t1 = new Time(23, 59, 59, 5);
-            Time t2 = t1;                   // 2 pointers to object Time
+            Statistics num = new Statistics(number);
+            Statistics copy = num;
 
-            Console.WriteLine("====== Current Time T1 ========================\n");   // constructor getting parameters // hour,minute,second
-            Console.WriteLine(t1.toString());
+            copy.SetOtherNumber(otherNumber);
 
-            //Console.WriteLine("====== Is Equal T1 and T2 ========================");
-            //Console.WriteLine("is T1 equal T2 ?  : " t1.Equals(t2));
+            int difference = num.GetNumber() - copy.GetOtherNumber();
+            Console.WriteLine("\n =====  Disassembly Number  ================== \n\n" + num.toString());
 
-            Console.WriteLine("====== TIKS COUNT PER HOUR ======== :: " + t2.GetTiksPerHour() + " ================");
-            Console.WriteLine(
-                                "\n Hours : " + t2.GetHour() +
-                                "\n Minutes : " + t2.GetMinute() +
-                                "\n Seconds : " + t2.GetSecond() +
-                                "\n Millisecond : " + t2.GetMillisecond());
+            Console.WriteLine("\n  Difference (Number1 , Number2)  =  " + number + "-" + otherNumber + " | " + difference);
+
+
+            //string numberStr = string.Format(number.ToString());
+
+            //int maxDigit = num.GetMaxDigit();
+            //int countDigits = num.GetDigitCounter(); 
+            //int sumDigits = num.GetDigitSum();          
+            //int reversedDigits = num.GetReversed();
+
+            //Console.WriteLine("======== Disassembly Number ===================== \n" );
+            //Console.WriteLine("  Origin Number   :   " + numberStr);
+            //Console.WriteLine("  Digit Counter   :   " + countDigits);
+            //Console.WriteLine("  Max Digit       :   " + maxDigit);
+            //Console.WriteLine("  Sum Digit       :   " + sumDigits);
+            //Console.WriteLine("  Reversed Digits :   " + reversedDigits);
 
 
             Console.ReadLine();
-
         }
     }
 }
