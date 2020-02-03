@@ -106,17 +106,17 @@
             while (num > 0)
             {
                 if (max < num % 10)
-                    max = num % 10;     // max = 2                                  
+                    max = num % 10;                                
                 num /= 10;              // num = 81 // num = 8
             }
             return max;
         }
-        public void SetMaxDigit(int number)    //  num = 812
+        public void SetMaxDigit(int number) 
         {
             maxDigit = MaxDigit(number);
         }
 
-        public int GetMaxDigit()    //  num = 812
+        public int GetMaxDigit()
         {
             return maxDigit;
         }
@@ -139,7 +139,7 @@
             minDigit = MinDigit(num);
         }
 
-        public int GetMinDigit()    //  num = 812
+        public int GetMinDigit()
         {
             return minDigit;
         }
@@ -151,7 +151,7 @@
             return reversedNumber;
         }
 
-        private void SetReversed(int number)    //  num = 290 
+        private void SetReversed(int number)    //  
         {
             int remainder;
             while (number != 0)
@@ -167,7 +167,7 @@
         public string toString()
         {
             return
-                    "\n    Metod/Value   |     Value" +
+                    "\n Property/Method  |     Value" +
                     "\n ---------------- | -----------------" +
                     "\n   Origin Number  | " + number +
                     "\n   Other Number   | " + otherNumber + "\n" +
