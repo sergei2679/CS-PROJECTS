@@ -29,7 +29,7 @@
             SetReversed(number);
 
         }
-        public Statistics(Statistics copyNumber)    // copy constructor (recomendate)
+        public Statistics(Statistics copyNumber)    // copy constructor
         {
             this.copyNumber = copyNumber.number;
         }
