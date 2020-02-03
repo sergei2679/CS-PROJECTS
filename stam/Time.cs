@@ -1,4 +1,4 @@
-namespace Lesson29012020_Time
+namespace Lesson_Time
 {
     class Time
     {
@@ -25,11 +25,12 @@ namespace Lesson29012020_Time
 
         public Time(Time other)
         {
-            hour = other.hour;         // copy constructor (recomendate)
+            hour = other.hour;         // copy constructor
             minute = other.minute;
             second = other.second;
             millisecond = other.millisecond;
         }
+        
         public int GetHour()
         {
             return hour;
@@ -70,6 +71,7 @@ namespace Lesson29012020_Time
         {
             return millisecond;
         }
+        
         private void SetMillisecond(long millisecond)
         {
             if (millisecond < 0)
@@ -98,9 +100,10 @@ namespace Lesson29012020_Time
             return AddZero(hour) + ":" + AddZero(minute) + ":" + AddZero(second) + ":" + AddZero(millisecond);
         }
         public string toString(long ticks)
-        {
+        {   
             return "ticks per second : " + tiks/millisecond + "\n ticks per minute : " + tiks/second + "\n ticks per hour : " + tiks/minute;
         }
+        
         private int TotalSeconds()
         {
             return ((hour * 60) + minute) * 60 + second;
@@ -110,6 +113,7 @@ namespace Lesson29012020_Time
         {
             return TotalSeconds() - other.TotalSeconds();
         }
+        
         public bool Equals(Time other)
         {
             if (other == null)
