@@ -102,12 +102,13 @@ namespace Lesson_20200205_bus_arrival
             //return time.GetHour() == other.time.GetHour() && time.GetMinute() == other.time.GetMinute() && time.GetSecond() == other.time.GetSecond();
         }
 
-        public bool isFull(BusArrival busArr)
+         public bool isFull()
         {
-            if (busArr.GetPassengersNumber() == maxPassengersNumber)
+            if (passengersNumber == maxPassengersNumber)
                 return true;
             return false;
         }
+        
         private static BusArrival GetBusWith10Passengers(BusArrival[] busArr)
         {
             int minIndex = 0;
