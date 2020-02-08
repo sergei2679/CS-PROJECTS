@@ -55,26 +55,3 @@ namespace Lesson_20200205_bus_arrival
         }
     }
 }
-
-//namespace Lesson_20200205_bus_arrival_property
-//{
-//    class Program
-//    {
-//        static void Main(string[] args)
-//        {
-//            Time time = new Time(10, 30, 0);
-//            Time otherTime = new Time(12, 30, 40);
-
-//            BusArrival bus = new BusArrival(time.GetHour(), time.GetMinute(), time.GetSecond(), 95, 15);
-//            Console.WriteLine(bus.toString());
-
-//            BusArrival copy = new BusArrival(otherTime.GetHour(), otherTime.GetMinute(), otherTime.GetSecond(), 95, 15);
-
-//            Console.WriteLine(copy.toString());
-
-
-//            Console.ReadLine();
-
-//        }
-//    }
-//}
