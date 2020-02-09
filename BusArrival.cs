@@ -9,7 +9,7 @@ namespace Lesson_20200205_bus_arrival
 
         public BusArrival(int hour, int minute, int second, byte lineNumber, byte passengersNumber)
         {
-            this.lineNumber = 0;
+            this.lineNumber = 1;
             this.passengersNumber = 0;
             time = new Time(hour, minute, second);
             SetLineNumber(lineNumber);
