@@ -47,9 +47,29 @@ namespace Lesson_20200205_bus_arrival
             };
 
             Console.WriteLine(bus.printBusWith10Passengers(busArr));
+            
+            
 
+// ---------------------- BUS STOP -------------------------------------------------------------------
+            
+            BusArrival busArrival1 = new BusArrival(14, 35, 27, 90, 25);
+            BusArrival busArrival2 = new BusArrival(18, 30, 20, 74, 20);
+            BusArrival busArrival3 = new BusArrival(19, 10, 7, 74, 15);
 
+            BusStop busStop1 = new BusStop();
+            BusStop busStop2 = new BusStop();   //  86400 seconds = 1 day   // 52527 = 14:35:27
+            BusStop busStop3 = new BusStop();
 
+            busStop1.Add(busArrival1);
+            busStop2.Add(busArrival2);
+            busStop3.Add(busArrival3);
+
+            Console.WriteLine(busStop1.ToString());
+            Console.WriteLine(busStop2.ToString());
+            Console.WriteLine(busStop3.ToString());
+
+            
+            
             Console.ReadLine();
 
         }
