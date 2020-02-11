@@ -15,7 +15,7 @@ namespace Lesson_20200205_bus_arrival
             SetSecond(second);
         }
 
-        // public Time(Time other):this(other.hour, other.minute, other.second) { this.}  // copy constructor
+        //public Time(Time other):this(other.hour, other.minute, other.second) { }
 
         public Time(Time other)         // copy constructor
         {
@@ -37,7 +37,7 @@ namespace Lesson_20200205_bus_arrival
         public int GetMinute()
         {
             return minute;
-        }               
+        }
 
         public void SetMinute(int minute)
         {
@@ -61,22 +61,21 @@ namespace Lesson_20200205_bus_arrival
             return (num < 10 ? "0" : "") + num;
         }
 
-        public string toString()
+        public string ToString()
         {
             return AddZero(GetHour()) + ":" + AddZero(GetMinute()) + ":" + AddZero(GetSecond());
         }
-        
-        private int TotalSeconds()
+
+        public int TotalSeconds()
         {
             return ((hour * 60) + minute) * 60 + second;
         }
 
-        //doesn't support null.
         public int Difference(Time other)
         {
             if (this == other)
                 return 0;
-            return this.TotalSeconds() - other.TotalSeconds();
+            return TotalSeconds() - other.TotalSeconds();
         }
 
 
@@ -86,11 +85,8 @@ namespace Lesson_20200205_bus_arrival
                 return false;
             if (this == other)
                 return true;
-            return this.hour == other.hour && this.minute == other.minute
-                && this.second == other.second;
-            //return this.TotalSeconds() == other.TotalSeconds();
-
-
+            return hour == other.hour && minute == other.minute
+                && second == other.second;
         }
 
         public bool Before(Time other)
