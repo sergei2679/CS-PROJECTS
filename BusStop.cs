@@ -57,7 +57,6 @@ namespace Lesson_20200209_bus_stop
 
         public void Add(BusArrival busArrival)
         {
-            //timeSpan = (busStopHour * 60 * 60) + (busStopMinute * 60) + busStopSecond;
             timeSpan = (busArrival.TimeArrival.GetHour() * 60 * 60) + (busArrival.TimeArrival.GetMinute() * 60) + busArrival.TimeArrival.GetSecond();
             busArrivals[timeSpan] = busArrival;
         }
@@ -91,7 +90,18 @@ namespace Lesson_20200209_bus_stop
         {
             this.busStopSecond = busStopSecond;
         }
+  // -------------------------------------------------------------------
 
+        public string ToString()
+        {
+            return
+                    "\n Time Arrival     : " + busArrivals[timeSpan].TimeArrival.ToString() +
+                    "\n Time span        : " + timeSpan +
+                    "\n Line Number      : " + busArrivals[timeSpan].LineNumber +
+                    "\n Passengers       : " + busArrivals[timeSpan].Passengers;
+        }
+ // -----------------------------------------------------------------------------
+        
     
         #region PROPERTY
 
@@ -134,31 +144,5 @@ namespace Lesson_20200209_bus_stop
         //}
         #endregion
 
-        // -------------------------------------------------------------------
-
-        public string ToString()
-        {
-            return
-                    "\n Time Arrival     : " + busArrivals[timeSpan].TimeArrival.ToString() +
-                    "\n Time span        : " + timeSpan +
-                    "\n Line Number      : " + busArrivals[timeSpan].LineNumber +
-                    "\n Passengers       : " + busArrivals[timeSpan].Passengers;
-        }
-
-
-        //public string toStringArrayObject()
-        //{
-        //    string strObj = "";
-
-        //    for (int i = 0; i < busArrivals.Length; i++)
-        //    {
-        //        strObj += "ROW " + i + " ------------------------------------\n" + busArrivals[i].toString();
-                                         
-        //    }
-
-        //    return strObj;
-        //}
-
-     
     }
 }
