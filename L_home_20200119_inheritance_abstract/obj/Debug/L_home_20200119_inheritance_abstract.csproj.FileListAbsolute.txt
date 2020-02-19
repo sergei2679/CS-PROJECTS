@@ -1,0 +1,6 @@
+C:\Drive D\L_home_20200119_inheritance_abstract\obj\Debug\L_home_20200119_inheritance_abstract.csprojAssemblyReference.cache
+C:\Drive D\L_home_20200119_inheritance_abstract\bin\Debug\L_home_20200119_inheritance_abstract.exe.config
+C:\Drive D\L_home_20200119_inheritance_abstract\bin\Debug\L_home_20200119_inheritance_abstract.exe
+C:\Drive D\L_home_20200119_inheritance_abstract\bin\Debug\L_home_20200119_inheritance_abstract.pdb
+C:\Drive D\L_home_20200119_inheritance_abstract\obj\Debug\L_home_20200119_inheritance_abstract.exe
+C:\Drive D\L_home_20200119_inheritance_abstract\obj\Debug\L_home_20200119_inheritance_abstract.pdb
