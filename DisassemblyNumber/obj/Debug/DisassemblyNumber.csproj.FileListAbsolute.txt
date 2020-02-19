@@ -1,0 +1,6 @@
+C:\Drive D\DisassemblyNumber\obj\Debug\DisassemblyNumber.csprojAssemblyReference.cache
+C:\Drive D\DisassemblyNumber\bin\Debug\DisassemblyNumber.exe.config
+C:\Drive D\DisassemblyNumber\bin\Debug\DisassemblyNumber.exe
+C:\Drive D\DisassemblyNumber\bin\Debug\DisassemblyNumber.pdb
+C:\Drive D\DisassemblyNumber\obj\Debug\DisassemblyNumber.exe
+C:\Drive D\DisassemblyNumber\obj\Debug\DisassemblyNumber.pdb
