@@ -1,6 +1,0 @@
-C:\Drive D\Exersice_56\obj\Debug\Exersice_56.csprojAssemblyReference.cache
-C:\Drive D\Exersice_56\bin\Debug\Exersice_56.exe.config
-C:\Drive D\Exersice_56\bin\Debug\Exersice_56.exe
-C:\Drive D\Exersice_56\bin\Debug\Exersice_56.pdb
-C:\Drive D\Exersice_56\obj\Debug\Exersice_56.exe
-C:\Drive D\Exersice_56\obj\Debug\Exersice_56.pdb
